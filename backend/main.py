@@ -41,7 +41,7 @@ def analyze_video(request: VideoAnalysisRequest):
     docs = youtubeProcessor.retrieve_youtube_documents(video_url=link,verbose=True)
     print("num_of_docs: ",len(docs))
 
-    key_concepts = youtubeProcessor.find_key_concepts(documents=docs[:20], sample_size=5, verbose=True)
+    key_concepts = youtubeProcessor.find_key_concepts(documents=docs[:10], sample_size=5, verbose=True)
 
     # summary = geminiProcessor.generate_document_summary(documents=docs[0:5], verbose=True)
 

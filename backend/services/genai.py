@@ -7,6 +7,7 @@ from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain.chains.llm import LLMChain
 from langchain_core.prompts import PromptTemplate
 from vertexai.generative_models import GenerativeModel
+import json
 
 
 import logging
@@ -15,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 class GeminiProcessor:
     def __init__(self,model_name, project) -> None:
-        self.model = VertexAI(model_name=model_name, project=project)
+        self.model = VertexAI(model_name=model_name, temperature=0, project=project)
         self.project = project
 
     def generate_document_summary(self,documents, **args):
@@ -98,11 +99,11 @@ class YoutubeProcessor:
             group_content = (",").join([doc.page_content for doc in group])
             prompt = PromptTemplate(
             template="""
-            Find and define key concepts found in the text:
+            Find and define key concepts or terms found in the text. 
+            Respond in the following format as a JSON object without any backticks, separating each concept with a comma:
+            {{"concept": "definition", "concept": "definition", ...}}:
+            
             {text}
-
-            Respond in the follwoing format as a string seperating each concept with a comma:
-            "concept":"defination"
             """,
             input_variables=["text"]
             )
@@ -129,11 +130,14 @@ class YoutubeProcessor:
 
                 batch_cost += group_input_cost + group_output_cost
                 logger.info(f"Total group cost: {group_input_cost+group_output_cost}")
+        
+
+        processed_concepts = [concept.replace("```json", "").replace("```", "").replace("\n```", "").replace("\n```json", "") for concept in batch_concepts]
+        processed_concepts = [json.loads(concept) for concept in processed_concepts]
 
         
-        
         logger.info(f"Total Analysis cost: ${batch_cost}")
-        return batch_concepts
+        return processed_concepts
         
                 
 

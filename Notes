@@ -35,4 +35,5 @@ const: can never change it
 
 May 23
 1) vertexAI Generative model for counting tokens
-2) challenges- rate limit, halucinations as thr size of group increase, associated cost with hitting the API if number of groups increase
+2) challenges- rate limit, halucinations as thr size of group increase, associated cost with hitting the API if number of groups increase4
+3) put two brackets in promt to define json object else it will consider it as an input: {{j}}
