@@ -1,0 +1,38 @@
+Take Youtube videos and extract jargon using google gemini
+Take transcripts, do semantic chunking and generate flash cards
+Takes 1/100th of a time in analysing the video and 1/100 th of the cost
+
+////
+
+Pydantic is a Python library for data parsing and validation. It uses the type hinting mechanism of the newer versions of Python (version 3.6 onwards) and validates the types during the runtime. Pydantic defines BaseModel class. It acts as the base class for creating user defined models.
+
+CORSMiddleware: .https://fastapi.tiangolo.com/tutorial/cors/
+Frontend runs a javascript on one origin and it need to communicate with the backend on another origin
+
+////
+Backend:
+
+Frontend
+
+Install:
+Web browsers can run javascrpit
+Datatype: 
+symbol- a primitive valu that is unique, object- can store key value pairs
+
+
+var: used throughout dynamically
+declare- var a
+declare and assign- var b=2
+consol.log(a) will show the value of variables
+case sensitive
+how to name: properCamelCase
+
+let: can only be used in the scope it is defined
+
+const: can never change it
+
+
+
+May 23
+1) vertexAI Generative model for counting tokens
+2) challenges- rate limit, halucinations as thr size of group increase, associated cost with hitting the API if number of groups increase
