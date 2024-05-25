@@ -1,9 +1,49 @@
 {
   "key_concepts": [
-    "Here's a JSON object containing the key concepts and their definitions from the text, formatted as you requested:\n\n```json\n{\n\"self-attention\": \"A novel attention mechanism that allows a model to attend to all positions in the input sequence simultaneously, improving its ability to capture long-range dependencies.\",\n\"Transformers\": \"A type of neural network architecture that relies heavily on self-attention mechanisms, achieving state-of-the-art performance in various NLP tasks.\",\n\"natural language processing (NLP)\": \"A field of computer science concerned with enabling computers to understand, interpret, and generate human language.\",\n\"bidirectional LSTM\": \"A type of recurrent neural network (RNN) that can process sequences in both forward and backward directions, allowing it to capture context from both sides.\",\n\"attention mechanism\": \"A mechanism that allows a model to focus on specific parts of an input sequence that are most relevant to the current task.\",\n\"machine translation\": \"The task of automatically translating text from one language to another.\",\n\"parsing\": \"The process of analyzing the grammatical structure of a sentence.\",\n\"bottleneck\": \"A point in a system where the capacity is limited, restricting the overall performance.\",\n\"recurrence\": \"The property of a function or process that repeats itself over time or with respect to some input sequence.\",\n\"state-of-the-art\": \"The most advanced or sophisticated level of technology or knowledge currently available.\"\n}\n``` \n",
-    "Here's a JSON object containing the key concepts and their definitions from the text:\n\n```json\n{\n\"Linear interaction distance\": \"In recurrent neural networks, the distance between words in the sequence, which limits the network's ability to learn long-distance dependencies.\",\n\"Long-distance dependencies\": \"Relationships between words that are far apart in a sequence.\",\n\"Gradient problems\": \"Challenges in training RNNs to learn long-distance dependencies due to vanishing or exploding gradients.\",\n\"LSTMs\": \"A type of RNN that uses gates to better handle long-distance dependencies.\",\n\"Linear order\": \"The sequential order of words in a sentence.\",\n\"Index dependence\": \"The dependence of RNNs on the position of words in the sequence, limiting parallelization.\",\n\"Unparallelizable operations\": \"Operations that cannot be computed simultaneously due to dependencies between them.\"\n}\n``` \n",
-    "```json\n{\n   \"linear interaction issues\": \"The issue with the linear distance between words, which makes it harder for the model to learn long-range dependencies.\",\n   \"attention Network\": \"A neural network architecture that uses an attention mechanism to focus on specific parts of the input.\",\n   \"attention\": \"A mechanism that allows the model to focus on specific parts of the input, regardless of their distance.\"\n\n}\n```",
-    "```json\n{\"dot product\":\"The dot product is a mathematical operation that takes two vectors of equal dimensions and produces a single number. It is defined as the sum of the products of the corresponding entries of the vectors.\"}\n```",
-    "{\"output is just the weighted sum of values\": \"The output is calculated as the weighted sum of values, where the weights are ditentukan by the affinity between the current word and all possible words in the sequence.\", \"the Affinity between I and J normalized by the infinity between I and all of the possible J Prime in the sequence\": \"The affinity between word I and word J is normalized by the affinity between word I and all other possible words (J') in the sequence.\", \"the actual weight that I'm going to look at J from I is softmax of this over all of the possible indices\": \"The actual weight used to look up word J from word I is calculated as the softmax of the affinity between word I and word J, divided by the sum of affinities between word I and all possible words in the sequence.\", \"qxk transpose will end up being a low rank approximation to that matrix\": \"The matrix obtained by multiplying the transpose of Q by K will be a low rank approximation to the matrix obtained by calculating the dot product between each word and all other words in the sequence.\", \"you should be looking at yourself or not\": \"Whether or not a word should attend to itself is determined by the learned matrices Q and K. If Q and K are identity matrices, then the word will attend to itself. However, if Q and K are different, then the word may not attend to itself.\", \"why do we learn two different matrices q and k when like q transpose Qi transpose kj is really just one matrix in the middle between that's a great question it ends up being because this will end up being a low rank approximation to that matrix so,it is for computational efficiency reasons although it also i think feels kind of nice and uh in the presentation but yeah what we'll end up doing is having a very low rank approximation to qk transpose and so it you actually do do it like this it's a good question\": \"We learn two different matrices, Q and K, instead of just one matrix, because it allows us to create a low-rank approximation to the matrix obtained by calculating the dot product between each word and all other words in the sequence. This is done for computational efficiency reasons.\"}"
+    {
+      "self-attention": "A mechanism that allows a model to attend to different parts of an input sequence, enabling it to capture long-range dependencies and relationships between words.",
+      "Transformers": "A type of neural network architecture that relies heavily on self-attention mechanisms, achieving state-of-the-art performance in various NLP tasks.",
+      "natural language processing": "A field of computer science concerned with enabling computers to understand, process, and generate human language.",
+      "AI systems": "Computer systems designed to simulate human intelligence and perform tasks that typically require human-level cognitive abilities.",
+      "assignment four": "The fourth assignment in the CS224n course, likely focusing on machine translation.",
+      "Azure": "A cloud computing platform and infrastructure created by Microsoft.",
+      "collab": "A cloud-based platform for machine learning research and education, offering access to computational resources like GPUs.",
+      "assignment five": "The fifth assignment in the CS224n course, details yet to be announced.",
+      "final project proposal": "A proposal outlining the project students plan to work on for the final project in the CS224n course.",
+      "final project": "The culminating project in the CS224n course, requiring students to apply the concepts and techniques learned throughout the semester."
+    },
+    {
+      "bi-directional lstm": "A type of recurrent neural network that processes input sequences in both forward and backward directions, allowing it to capture long-range dependencies and context.",
+      "unidirectional lstm": "A type of recurrent neural network that processes input sequences in only one direction, either forward or backward.",
+      "attention": "A mechanism that allows a model to focus on specific parts of the input sequence when generating the output sequence.",
+      "machine translation": "The task of automatically translating text from one language to another.",
+      "bottleneck": "A point in a system where the capacity is limited, causing a slowdown or restriction.",
+      "recurrence": "The property of a system or process that repeats itself over time.",
+      "trial and error": "A method of problem-solving that involves trying different solutions until one is found that works.",
+      "long-range dependencies": "Relationships between elements in a sequence that are far apart from each other.",
+      "context": "The surrounding information that helps to understand the meaning of a word or phrase."
+    },
+    {
+      "linear interaction distance": "The concept that nearby words in a sequence often have related meanings, which is captured by recurrent neural networks (RNNs) as they process the sequence from left to right or right to left.",
+      "long distance dependencies": "The challenge in RNNs where words that are far apart in a sequence may have a strong relationship, but the RNN's processing steps may not be able to effectively capture this relationship due to the distance between the words.",
+      "gradient problems": "Issues that can arise in RNNs when training on long sequences, where the gradients used to update the network's weights can become vanishingly small or explode, making it difficult to learn long-distance dependencies effectively."
+    },
+    {
+      "linear order": "The traditional way of processing information in sequence, one step at a time.",
+      "linear interaction distance problem": "The difficulty for neural networks to learn long-distance dependencies between words due to their linear structure.",
+      "recurrent neural networks (RNNs)": "A type of neural network that processes information sequentially, maintaining an internal state that remembers previous inputs.",
+      "sequence length": "The number of elements in a sequence.",
+      "unparallelizable operations": "Operations that cannot be performed simultaneously due to their dependencies on previous operations.",
+      "RNN hidden state": "The internal state of an RNN at a specific time step, containing information about the sequence processed so far."
+    },
+    {
+      "linear interaction distance": "The distance between two words in a sequence, which can affect how well they interact with each other.",
+      "attention": "A mechanism that allows a model to focus on specific parts of an input sequence, rather than having to process the entire sequence at once.",
+      "recurrence": "The process of repeatedly applying a function to an input sequence, which allows the model to learn long-term dependencies.",
+      "attention-based models": "Models that use attention mechanisms to process input sequences, rather than relying on recurrence.",
+      "query": "A representation of a word that is used to access information from a set of values.",
+      "values": "A set of representations that are used to provide information to a query.",
+      "keys": "A set of representations that are used to determine which values are most relevant to a query."
+    }
   ]
 }
