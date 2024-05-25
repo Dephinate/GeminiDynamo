@@ -1,5 +1,9 @@
 .App {
-    padding: 20px;
+    padding: 20x;
+    /* background-color: sienna; */
+    align-items: center;
+    margin-left: 10%;
+
 }
 
 .inputContainer {
@@ -12,12 +16,14 @@
     height: 40px;
 }
 .inputContainer button {
-    background-color: #000;
+    background-color: #e90505;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    animation: mymove 5s infinite;
+
 }
 
 .inputField {
